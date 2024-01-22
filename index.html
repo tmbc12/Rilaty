@@ -61,14 +61,54 @@
       /* Center the image */
     }
 
+    /* Preloader Styles */
+    .preloader {
+      position: fixed;
+     
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      /* Background color of the preloader */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .preloader img {
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      /* Make sure the image fits within the container */
+    }
   </style>
 </head>
 
 <body class="body">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var preloader = document.querySelector(".preloader");
+      var preloaderImg = preloader.querySelector("img");
+
+      // Show the preloader
+      preloader.style.display = "flex";
+
+      // Hide the preloader after 10 seconds
+      setTimeout(function () {
+        preloader.style.display = "none";
+      }, 10000); // Adjust the time in milliseconds (10,000 ms = 10 seconds)
+    });
+  </script>
+  <div class="preloader">
+    <img src="/assets/loader gif.gif" alt="Loading..." />
+  </div>
+
   <div class="main-wrapper">
     <div data-collapse="none" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
       role="banner" class="sub-navbar w-nav">
-      <div class="sub-navbar_container" >
+      <div class="sub-navbar_container">
         <nav role="navigation" class="navbar_menu sub w-nav-menu" style="justify-content: center;">
           <div class="text-size-medium-white"><img
               src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/1fb710e9-827c-1f8b-5988-5f64d34de6af.png"
@@ -81,7 +121,7 @@
     <div class="page-rapper">
       <div data-w-id="3ef36510-a69e-0c93-1be5-8dc0734417b4" class="background-videos-section">
         <div data-w-id="c2c80364-40bd-a8e0-fb24-b85f4a87ca4c" class="section-long-scroll-black">
-         
+
           <div class="image-holder-woman" style="margin-top: 45px;">
             <img
               src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/28f05e67-8c44-c601-5b0c-a29a7ba0467a.jpg"
@@ -96,503 +136,505 @@
                 " class="image" />
           </div>
         </div>
-          <div class="page-padding" >
-            <div class="container-large-2">
-              <div class="padding-vertical padding-medium"></div>
-            </div>
+        <div class="page-padding">
+          <div class="container-large-2">
+            <div class="padding-vertical padding-medium"></div>
           </div>
         </div>
-        <div class="section-long-scroll-video">
-          <div class="tab-heading-wrapper">
-            <h1 class="heading-black-center">
+      </div>
+      <div class="section-long-scroll-video">
+        <div class="tab-heading-wrapper">
+          <h1 class="heading-black-center">
+            You’ve never seen everything like this before </h1>
+        </div>
+        <div class="video-wrapper">
+          <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+            class="background-video w-background-video w-background-video-atom">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="./assets/Video 1.webm" data-wf-ignore="true" />
+            </video><noscript>
+              <style>
+                [data-wf-bgvideo-fallback-img] {
+                  display: none;
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                  [data-wf-bgvideo-fallback-img] {
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                  }
+                }
+              </style>
+            </noscript>
+            <div aria-live="polite">
+              <button type="button" data-w-bg-video-control="true"
+                aria-controls="f4eb5e0f-baf1-c18c-9995-e6c17bc56bfb-video"
+                class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="heading-container">
+            <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
               You’ve never seen everything like this before </h1>
           </div>
-          <div class="video-wrapper">
-            <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
-              class="background-video w-background-video w-background-video-atom">
-              <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="./assets/Video 1.webm" data-wf-ignore="true" />
-              </video><noscript>
-                <style>
-                  [data-wf-bgvideo-fallback-img] {
-                    display: none;
-                  }
+        </div>
+      </div>
+      <div class="section-long-scroll-video">
+        <div class="tab-heading-wrapper">
+          <h1 class="heading-black-center">
+            Chaarana transports you to immersive destinations, when using the Vision Pro
+          </h1>
+        </div>
+        <div class="video-wrapper">
+          <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+            class="background-video w-background-video w-background-video-atom">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="./assets/Video 2.webm" data-wf-ignore="true" />
+            </video><noscript>
+              <style>
+                [data-wf-bgvideo-fallback-img] {
+                  display: none;
+                }
 
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-wf-bgvideo-fallback-img] {
-                      position: absolute;
-                      z-index: -100;
-                      display: inline-block;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                    }
+                @media (prefers-reduced-motion: reduce) {
+                  [data-wf-bgvideo-fallback-img] {
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                   }
-                </style>
-              </noscript>
-              <div aria-live="polite">
-                <button type="button" data-w-bg-video-control="true"
-                  aria-controls="f4eb5e0f-baf1-c18c-9995-e6c17bc56bfb-video"
-                  class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
-                  <span></span>
-                </button>
-              </div>
-            </div>
-            <div class="heading-container">
-              <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
-                You’ve never seen everything like this before </h1>
+                }
+              </style>
+            </noscript>
+            <div aria-live="polite">
+              <button type="button" data-w-bg-video-control="true"
+                aria-controls="0b0c278b-05a2-599d-af0d-6bb992148d49-video"
+                class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
+                <span></span>
+              </button>
             </div>
           </div>
-        </div>
-        <div class="section-long-scroll-video">
-          <div class="tab-heading-wrapper">
-            <h1 class="heading-black-center">
+          <div class="heading-container">
+            <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
               Chaarana transports you to immersive destinations, when using the Vision Pro
             </h1>
           </div>
-          <div class="video-wrapper">
-            <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
-              class="background-video w-background-video w-background-video-atom">
-              <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="./assets/Video 2.webm" data-wf-ignore="true" />
-              </video><noscript>
-                <style>
-                  [data-wf-bgvideo-fallback-img] {
-                    display: none;
-                  }
+        </div>
+      </div>
+      <div class="section-long-scroll-video">
+        <div class="tab-heading-wrapper">
+          <h1 class="heading-black-center">
+            Incredible destinations. Inimitable experiences. Immersive memories. <br>
+            Spatial Computers are mankind’s best storytelling devices since the Gutenberg press </h1>
+        </div>
+        <div class="video-wrapper">
+          <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+            class="background-video w-background-video w-background-video-atom">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="./assets/Video 3.webm" data-wf-ignore="true" />
+            </video><noscript>
+              <style>
+                [data-wf-bgvideo-fallback-img] {
+                  display: none;
+                }
 
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-wf-bgvideo-fallback-img] {
-                      position: absolute;
-                      z-index: -100;
-                      display: inline-block;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                    }
+                @media (prefers-reduced-motion: reduce) {
+                  [data-wf-bgvideo-fallback-img] {
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                   }
-                </style>
-              </noscript>
-              <div aria-live="polite">
-                <button type="button" data-w-bg-video-control="true"
-                  aria-controls="0b0c278b-05a2-599d-af0d-6bb992148d49-video"
-                  class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
-                  <span></span>
-                </button>
-              </div>
-            </div>
-            <div class="heading-container">
-              <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
-                Chaarana transports you to immersive destinations, when using the Vision Pro
-              </h1>
+                }
+              </style>
+            </noscript>
+            <div aria-live="polite">
+              <button type="button" data-w-bg-video-control="true"
+                aria-controls="30efb95f-f1da-4a90-719f-e0a53f2bfe59-video"
+                class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
+                <span></span>
+              </button>
             </div>
           </div>
-        </div>
-        <div class="section-long-scroll-video">
-          <div class="tab-heading-wrapper">
-            <h1 class="heading-black-center">
-              Incredible destinations. Inimitable experiences. Immersive memories. <br>
+          <div class="heading-container">
+            <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
+              Incredible destinations. Inimitable experiences. Immersive memories. <br> <br>
               Spatial Computers are mankind’s best storytelling devices since the Gutenberg press </h1>
           </div>
-          <div class="video-wrapper">
-            <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
-              class="background-video w-background-video w-background-video-atom">
-              <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="./assets/Video 3.webm" data-wf-ignore="true" />
-              </video><noscript>
-                <style>
-                  [data-wf-bgvideo-fallback-img] {
-                    display: none;
-                  }
+        </div>
+      </div>
+      <div class="section-long-scroll-video">
+        <div class="tab-heading-wrapper">
+          <h1 class="heading-black-center">
+            Step into worlds in ways never <br>
+             before possible.
+          </h1>
+        </div>
+        <div class="video-wrapper">
+          <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+            class="background-video w-background-video w-background-video-atom">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="./assets/Video 4.webm" data-wf-ignore="true" />
+            </video><noscript>
+              <style>
+                [data-wf-bgvideo-fallback-img] {
+                  display: none;
+                }
 
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-wf-bgvideo-fallback-img] {
-                      position: absolute;
-                      z-index: -100;
-                      display: inline-block;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                    }
+                @media (prefers-reduced-motion: reduce) {
+                  [data-wf-bgvideo-fallback-img] {
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                   }
-                </style>
-              </noscript>
-              <div aria-live="polite">
-                <button type="button" data-w-bg-video-control="true"
-                  aria-controls="30efb95f-f1da-4a90-719f-e0a53f2bfe59-video"
-                  class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
-                  <span></span>
-                </button>
-              </div>
-            </div>
-            <div class="heading-container">
-              <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
-                Incredible destinations. Inimitable experiences. Immersive memories. <br> <br>
-                Spatial Computers are mankind’s best storytelling devices since the Gutenberg press </h1>
+                }
+              </style>
+            </noscript>
+            <div aria-live="polite">
+              <button type="button" data-w-bg-video-control="true"
+                aria-controls="3d5021ec-5291-2b78-aa22-3392d1366ce5-video"
+                class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
+                <span></span>
+              </button>
             </div>
           </div>
-        </div>
-        <div class="section-long-scroll-video">
-          <div class="tab-heading-wrapper">
-            <h1 class="heading-black-center">
-              Step into worlds in ways never <br>
-               before possible.
+          <div class="heading-container">
+            <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
+              Step into worlds in ways never <br>before possible.
+
             </h1>
           </div>
-          <div class="video-wrapper">
-            <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
-              class="background-video w-background-video w-background-video-atom">
-              <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="./assets/Video 4.webm" data-wf-ignore="true" />
-              </video><noscript>
-                <style>
+        </div>
+      </div>
+      <div class="section-long-scroll-video">
+        <div class="tab-heading-wrapper">
+          <h1 class="heading-black-center">
+            See places, through a new lens <br> <br>
+            Feel things, through a new world
+          </h1>
+        </div>
+        <div class="video-wrapper">
+          <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
+            class="background-video w-background-video w-background-video-atom">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="./assets/Video 5.webm" data-wf-ignore="true" />
+            </video><noscript>
+              <style>
+                [data-wf-bgvideo-fallback-img] {
+                  display: none;
+                }
+
+                @media (prefers-reduced-motion: reduce) {
                   [data-wf-bgvideo-fallback-img] {
-                    display: none;
+                    position: absolute;
+                    z-index: -100;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                   }
-
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-wf-bgvideo-fallback-img] {
-                      position: absolute;
-                      z-index: -100;
-                      display: inline-block;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                    }
-                  }
-                </style>
-              </noscript>
-              <div aria-live="polite">
-                <button type="button" data-w-bg-video-control="true"
-                  aria-controls="3d5021ec-5291-2b78-aa22-3392d1366ce5-video"
-                  class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
-                  <span></span>
-                </button>
-              </div>
-            </div>
-            <div class="heading-container">
-              <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
-                Step into worlds in ways never <br>before possible.
-
-              </h1>
+                }
+              </style>
+            </noscript>
+            <div aria-live="polite">
+              <button type="button" data-w-bg-video-control="true"
+                aria-controls="3d5021ec-5291-2b78-aa22-3392d1366ce5-video"
+                class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
+                <span></span>
+              </button>
             </div>
           </div>
-        </div>
-        <div class="section-long-scroll-video">
-          <div class="tab-heading-wrapper">
-            <h1 class="heading-black-center">
+          <div class="heading-container">
+            <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
               See places, through a new lens <br> <br>
               Feel things, through a new world
             </h1>
           </div>
-          <div class="video-wrapper">
-            <div data-autoplay="true" data-loop="true" data-wf-ignore="true"
-              class="background-video w-background-video w-background-video-atom">
-              <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="./assets/Video 5.webm" data-wf-ignore="true" />
-              </video><noscript>
-                <style>
-                  [data-wf-bgvideo-fallback-img] {
-                    display: none;
-                  }
-
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-wf-bgvideo-fallback-img] {
-                      position: absolute;
-                      z-index: -100;
-                      display: inline-block;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                    }
-                  }
-                </style>
-              </noscript>
-              <div aria-live="polite">
-                <button type="button" data-w-bg-video-control="true"
-                  aria-controls="3d5021ec-5291-2b78-aa22-3392d1366ce5-video"
-                  class="w-backgroundvideo-backgroundvideoplaypausebutton play-pause-button w-background-video--control">
-                  <span></span>
-                </button>
-              </div>
-            </div>
-            <div class="heading-container">
-              <h1 words-slide-up="" text-split="" class="heading-white-center-30ch">
-                See places, through a new lens <br> <br>
-                Feel things, through a new world
-              </h1>
-            </div>
-          </div>
         </div>
       </div>
-      <div data-w-id="56518a50-a327-7443-a826-7748055afa7f" class="section-white">
-        <div class="page-padding">
-          <div class="container-large-2">
-            <div class="padding-vertical padding-medium">
-              <div class="section-content-wrapper">
-                <div class="logo-wrapper" style="display: flex; justify-content: center; align-items: center;">
-                  <img
-                    src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/2137128e-17ba-7e4e-60ca-5c5266d6c31b.png"
-                    loading="lazy" alt="" style="max-width: 50%; height: auto;" />
-                </div>
+    </div>
+    <div data-w-id="56518a50-a327-7443-a826-7748055afa7f" class="section-white">
+      <div class="page-padding">
+        <div class="container-large-2">
+          <div class="padding-vertical padding-medium">
+            <div class="section-content-wrapper">
+              <div class="logo-wrapper" style="display: flex; justify-content: center; align-items: center;">
+                <img
+                  src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/2137128e-17ba-7e4e-60ca-5c5266d6c31b.png"
+                  loading="lazy" alt="" style="max-width: 50%; height: auto;" />
+              </div>
 
-                <div class="image-holder">
-                  <img
-                    src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/19bc3815-da37-58be-4a38-cf24dc5dee00.png"
-                    loading="lazy" alt=""
-                    sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 77vw, (max-width: 1919px) 90vw, 1216px"
-                    srcset="
+              <div class="image-holder">
+                <img
+                  src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/19bc3815-da37-58be-4a38-cf24dc5dee00.png"
+                  loading="lazy" alt=""
+                  sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 77vw, (max-width: 1919px) 90vw, 1216px"
+                  srcset="
                     https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/19bc3815-da37-58be-4a38-cf24dc5dee00.png 500w,
                     https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/19bc3815-da37-58be-4a38-cf24dc5dee00.png 800w,
                     https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/19bc3815-da37-58be-4a38-cf24dc5dee00.png   988w
                       " class="image" />
-                </div>
-                <div class="white-shader"></div>
               </div>
+              <div class="white-shader"></div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
 
-      <section class="footer-light" style="background-color: black;">
-        <div class="section-footer">
-          <h1 class="h1"><img src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/817044d5-3b93-e5c3-f5f2-46fc7b30762c.png" alt=""  style="max-width: 60%; height: auto;"  ></h1>
-          <div class="flex-content">
-            <a href="#" class="fontawesome-brands"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="fontawesome-brands"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="fontawesome-brands last"><i class="fab fa-twitter"></i></a>
-          </div>
+    <section class="footer-light" style="background-color: black;">
+      <div class="section-footer">
+        <h1 class="h1"><img
+            src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/817044d5-3b93-e5c3-f5f2-46fc7b30762c.png"
+            alt="" style="max-width: 60%; height: auto;"></h1>
+        <div class="flex-content">
+          <a href="#" class="fontawesome-brands"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="fontawesome-brands"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="fontawesome-brands last"><i class="fab fa-twitter"></i></a>
         </div>
-        <style>
-          .h1 {
-            color: #fff;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: Varela Round, sans-serif;
-            font-size: 10vw;
-            line-height: 100%;
-          }
+      </div>
+      <style>
+        .h1 {
+          color: #fff;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: Varela Round, sans-serif;
+          font-size: 10vw;
+          line-height: 100%;
+        }
 
-          .h1.black {
-            color: #000;
+        .h1.black {
+          color: #000;
+        }
+
+        .section-footer {
+          width: 100%;
+          height: auto;
+          background-color: #000;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 30px;
+          display: flex;
+          bottom: 0;
+
+        }
+
+        .flex-content {
+          width: auto;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          top: 0px;
+          left: 0;
+          right: 0;
+        }
+
+        .fontawesome-brands {
+          width: 30px;
+          height: 30px;
+          color: #fff;
+          background-color: #000;
+          border-radius: 3px;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          padding: 5px;
+          font-family: Fontawesome Brands, sans-serif;
+          font-size: 20px;
+          text-decoration: none;
+          transition: background-color .3s, color .5s;
+          display: flex;
+        }
+
+        .fontawesome-brands:hover {
+          color: #000;
+          background-color: #acacac;
+        }
+
+
+        @media screen and (max-width: 767px) {
+          .vertical-nav-indicator {
+            width: 13px;
           }
 
           .section-footer {
-            width: 100%;
-            height: auto;
-            background-color: #000;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 30px;
-            display: flex;
-            bottom: 0;
-
+            position: relative;
           }
-
-          .flex-content {
-            width: auto;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            top: 0px;
-            left: 0;
-            right: 0;
-          }
-
-          .fontawesome-brands {
-            width: 30px;
-            height: 30px;
-            color: #fff;
-            background-color: #000;
-            border-radius: 3px;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            padding: 5px;
-            font-family: Fontawesome Brands, sans-serif;
-            font-size: 20px;
-            text-decoration: none;
-            transition: background-color .3s, color .5s;
-            display: flex;
-          }
-
-          .fontawesome-brands:hover {
-            color: #000;
-            background-color: #acacac;
-          }
-
-
-          @media screen and (max-width: 767px) {
-            .vertical-nav-indicator {
-              width: 13px;
-            }
-
-            .section-footer {
-              position: relative;
-            }
-          }
-
-          @font-face {
-            font-family: 'Fontawesome';
-            src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fa-regular-400.svg') format('svg');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-
-          @font-face {
-            font-family: 'Fontawesome Brands';
-            src: url('../fonts/fa-brands-400.woff2') format('woff2'), url('../fonts/fa-brands-400.eot') format('embedded-opentype'), url('../fonts/fa-brands-400.woff') format('woff'), url('../fonts/fa-brands-400.ttf') format('truetype'), url('../fonts/fa-brands-400.svg') format('svg');
-            font-weight: 400;
-            font-style: normal;
-            font-display: auto;
-          }
-
-          @font-face {
-            font-family: 'Fontawesome';
-            src: url('../fonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fa-solid-900.eot') format('embedded-opentype'), url('../fonts/fa-solid-900.woff') format('woff'), url('../fonts/fa-solid-900.ttf') format('truetype'), url('../fonts/fa-solid-900.svg') format('svg');
-            font-weight: 900;
-            font-style: normal;
-            font-display: auto;
-          }
-        </style>
-      </section>
-
-    </div>
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=647f1a5c873d0cecb8d514b1"
-      type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"></script>
-    <script src="https://assets.website-files.com/647f1a5c873d0cecb8d514b1/js/webflow.f2580e098.js"
-      type="text/javascript"></script>
-    <!-- Make pages load faster -->
-    <script src="https://instant.page/5.2.0" type="module"
-      integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
-
-    <!-- GSAP Text Animations -->
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        // Split text into spans
-        let typeSplit = new SplitType("[text-split]", {
-          types: "words, chars",
-          tagName: "span",
-        });
-
-        // Link timelines to scroll position
-        function createScrollTrigger(triggerElement, timeline) {
-          // Play tl when scrolled into view (80% from top of screen)
-          ScrollTrigger.create({
-            trigger: triggerElement,
-            start: "top 80%",
-            onEnter: () => timeline.play(),
-          });
         }
 
-        $("[words-slide-up]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".word"), {
-            opacity: 0,
-            yPercent: 100,
-            duration: 0.5,
-            ease: "back.out(2)",
-            stagger: { amount: 0.5 },
-          });
-          createScrollTrigger($(this), tl);
-        });
+        @font-face {
+          font-family: 'Fontawesome';
+          src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fa-regular-400.svg') format('svg');
+          font-weight: 400;
+          font-style: normal;
+          font-display: auto;
+        }
 
-        $("[words-rotate-in]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.set($(this).find(".word"), { transformPerspective: 1000 });
-          tl.from($(this).find(".word"), {
-            rotationX: -90,
-            duration: 0.6,
-            ease: "power2.out",
-            stagger: { amount: 0.6 },
-          });
-          createScrollTrigger($(this), tl);
-        });
+        @font-face {
+          font-family: 'Fontawesome Brands';
+          src: url('../fonts/fa-brands-400.woff2') format('woff2'), url('../fonts/fa-brands-400.eot') format('embedded-opentype'), url('../fonts/fa-brands-400.woff') format('woff'), url('../fonts/fa-brands-400.ttf') format('truetype'), url('../fonts/fa-brands-400.svg') format('svg');
+          font-weight: 400;
+          font-style: normal;
+          font-display: auto;
+        }
 
-        $("[words-slide-from-right]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".word"), {
-            opacity: 0,
-            x: "1em",
-            duration: 0.6,
-            ease: "power2.out",
-            stagger: { amount: 0.2 },
-          });
-          createScrollTrigger($(this), tl);
-        });
+        @font-face {
+          font-family: 'Fontawesome';
+          src: url('../fonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fa-solid-900.eot') format('embedded-opentype'), url('../fonts/fa-solid-900.woff') format('woff'), url('../fonts/fa-solid-900.ttf') format('truetype'), url('../fonts/fa-solid-900.svg') format('svg');
+          font-weight: 900;
+          font-style: normal;
+          font-display: auto;
+        }
+      </style>
+    </section>
 
-        $("[letters-slide-up]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            yPercent: 100,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { amount: 0.6 },
-          });
-          createScrollTrigger($(this), tl);
-        });
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=647f1a5c873d0cecb8d514b1"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+  <script src="https://assets.website-files.com/647f1a5c873d0cecb8d514b1/js/webflow.f2580e098.js"
+    type="text/javascript"></script>
+  <!-- Make pages load faster -->
+  <script src="https://instant.page/5.2.0" type="module"
+    integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 
-        $("[letters-slide-down]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            yPercent: -120,
-            duration: 0.3,
-            ease: "power1.out",
-            stagger: { amount: 0.7 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-fade-in]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            opacity: 0,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { amount: 0.8 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-fade-in-random]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            opacity: 0,
-            duration: 0.05,
-            ease: "power1.out",
-            stagger: { amount: 0.4, from: "random" },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[scrub-each-word]").each(function (index) {
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: $(this),
-              start: "top 90%",
-              end: "top center",
-              scrub: true,
-            },
-          });
-          tl.from($(this).find(".word"), {
-            opacity: 0.2,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { each: 0.4 },
-          });
-        });
-
-        // Avoid flash of unstyled content
-        gsap.set("[text-split]", { opacity: 1 });
+  <!-- GSAP Text Animations -->
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      // Split text into spans
+      let typeSplit = new SplitType("[text-split]", {
+        types: "words, chars",
+        tagName: "span",
       });
-    </script>
+
+      // Link timelines to scroll position
+      function createScrollTrigger(triggerElement, timeline) {
+        // Play tl when scrolled into view (80% from top of screen)
+        ScrollTrigger.create({
+          trigger: triggerElement,
+          start: "top 80%",
+          onEnter: () => timeline.play(),
+        });
+      }
+
+      $("[words-slide-up]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".word"), {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          ease: "back.out(2)",
+          stagger: { amount: 0.5 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[words-rotate-in]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.set($(this).find(".word"), { transformPerspective: 1000 });
+        tl.from($(this).find(".word"), {
+          rotationX: -90,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: { amount: 0.6 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[words-slide-from-right]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".word"), {
+          opacity: 0,
+          x: "1em",
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: { amount: 0.2 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-slide-up]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          yPercent: 100,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { amount: 0.6 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-slide-down]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          yPercent: -120,
+          duration: 0.3,
+          ease: "power1.out",
+          stagger: { amount: 0.7 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-fade-in]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          opacity: 0,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { amount: 0.8 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-fade-in-random]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          opacity: 0,
+          duration: 0.05,
+          ease: "power1.out",
+          stagger: { amount: 0.4, from: "random" },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[scrub-each-word]").each(function (index) {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: $(this),
+            start: "top 90%",
+            end: "top center",
+            scrub: true,
+          },
+        });
+        tl.from($(this).find(".word"), {
+          opacity: 0.2,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { each: 0.4 },
+        });
+      });
+
+      // Avoid flash of unstyled content
+      gsap.set("[text-split]", { opacity: 1 });
+    });
+  </script>
 </body>
 
 </html>
